@@ -1,0 +1,6 @@
+# Intermediate files
+bazel-*
+
+# Ignore all files in the .DS_Store
+.DS_Store
+
