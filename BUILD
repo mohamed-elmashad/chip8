@@ -1,13 +1,12 @@
 cc_library(
     name = "emulator",
-    srcs = [        "emulator.cc",        "cpu.cc",        "memory.cc",        "graphics.cc",    ],
-    hdrs = [        "emulator.h",        "cpu.h",        "memory.h",        "graphics.h",    ],
-    # deps = [        "//third_party/sdl:sdl",    ],
+    srcs = [ "src/emulator.cc", "src/cpu/cpu.cc", "src/memory/memory.cc", "src/graphics/graphics.cc", ],
+    hdrs = [ "src/emulator.h", "src/cpu/cpu.h", "src/memory/memory.h", "src/graphics/graphics.h", ],
+    # deps = [ "//third_party/sdl:sdl", ],
 )
 
 cc_binary(
     name = "chip8",
-    srcs = ["main.cc"],
+    srcs = ["src/main.cc"],
     deps = [":emulator"],
 )
-

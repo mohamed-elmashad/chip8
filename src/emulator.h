@@ -1,9 +1,9 @@
 #ifndef EMULATOR_H
 #define EMULATOR_H
 
-#include "cpu.h"
-#include "memory.h"
-#include "graphics.h"
+#include "cpu/cpu.h"
+#include "memory/memory.h"
+#include "graphics/graphics.h"
 #include <string>
 
 class Emulator {
