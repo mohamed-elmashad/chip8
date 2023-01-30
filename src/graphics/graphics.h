@@ -2,6 +2,7 @@
 #define GRAPHICS_H
 
 #include <cstdint>
+#include <SDL.h>
 
 class Graphics {
 public:
@@ -11,6 +12,17 @@ public:
 
 private:
     // Declare screen buffer and SDL objects
+    uint32_t screenBuffer[64 * 32];
+    SDL_Window* window;
+    SDL_Renderer* renderer;
+    SDL_Texture* texture;
+
+    // Declare screen width and height
+    const int SCREEN_WIDTH = 640;
+    const int SCREEN_HEIGHT = 320;
+
+    // Declare screen scale
+    const int SCREEN_SCALE = 10;
 };
 
 #endif
